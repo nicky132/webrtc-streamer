@@ -1,3 +1,13 @@
+
+# 通过WebRTC实现播放
+
+## webrtc-streamer插件开源地址：https://github.com/mpromonet/webrtc-streamer
+## 通过git clone命令下载对应系统webrtc
+## 解压后进入文件目录下，通过CMD打开，输入webrtc-streamer.exe -H 0.0.0.0:9001启动服务（可以指定ip地址和端口号，远程访问注意防火墙）
+## 启动成功后可输入以下地址访问页面预览，注意，如果绑定的不是0.0.0.0请输入对应ip
+## http://127.0.0.1:9001/webrtcstreamer.html?video=你的rtsp流地址
+## 如果无法查看视频（确保rtsp流地址正确的情况下，不确定可以先用vlc访问一下），可能是权限问题，尝试用管理员身份打开CMD
+
 [![CircleCI](https://circleci.com/gh/mpromonet/webrtc-streamer.svg?style=shield)](https://circleci.com/gh/mpromonet/webrtc-streamer)
 [![CirusCI](https://api.cirrus-ci.com/github/mpromonet/webrtc-streamer.svg)](https://cirrus-ci.com/github/mpromonet/webrtc-streamer)
 [![Snap Status](https://snapcraft.io//webrtc-streamer/badge.svg)](https://snapcraft.io/webrtc-streamer)
@@ -290,6 +300,3 @@ The container entry point is the webrtc-streamer application, then you can :
 * run the container giving config.json file using :
 
         docker run -p 8000:8000 -v $PWD/config.json:/app/config.json mpromonet/webrtc-streamer
-
-
-
